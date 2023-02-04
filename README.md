@@ -25,10 +25,10 @@ The were visualizations made using Vue, D3 and Chart.js.
 
 <table>
   <tr>
-    <td><img src='docs/nodejs.png' width='200'></td>
-    <td><img src='docs/vuejs.png' width='200'></td>
-    <td><img src='docs/vuejs.png' width='200'></td>
-    <td><img src='docs/vuejs.png' width='200'></td>
+    <td><img src='docs/nodejs.png' height='100'></td>
+    <td><img src='docs/vuejs.png' height='100'></td>
+    <td><img src='docs/d3.png' height='100'></td>
+    <td><img src='docs/chartjs.png' height='100'></td>
   </tr>
  </table>
 
