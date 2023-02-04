@@ -1,0 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300|Pontano+Sans&display=swap');
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    background: rgb(25,25,25);
+}
+
+
+#app {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #fff;
+    margin-top: 60px;
+}
+
+h1, h2 {
+    font-family: 'Pontano Sans', Helvetica, Arial, sans-serif;
+}
+
+h2 {
+    margin-top: 5vh;
+}
+
+a {
+    color: #ff1a1a;
+}
+
+a:hover{
+    color: hsla(198, 92%, 76%, 1);
+}

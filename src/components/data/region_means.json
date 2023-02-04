@@ -1,0 +1,122 @@
+[
+  {
+    "Region": "Australia and New Zealand",
+    "Rank": "9.5",
+    "Score": "7.2675",
+    "GDP": "1.3375",
+    "Family": "1.5525",
+    "Health": "1.031",
+    "Freedom": "0.571",
+    "Trust": "0.335",
+    "Generosity": "0.331",
+    "Countries": "2.00"
+  },
+  {
+    "Region": "North America",
+    "Rank": "14.00",
+    "Score": "7.085",
+    "GDP": "1.399",
+    "Family": "1.481",
+    "Health": "0.9565",
+    "Freedom": "0.519",
+    "Trust": "0.218",
+    "Generosity": "0.2825",
+    "Countries": "2.00"
+  },
+  {
+    "Region": "Western Europe",
+    "Rank": "23.380952",
+    "Score": "6.84219",
+    "GDP": "1.357333",
+    "Family": "1.472857",
+    "Health": "1.01519",
+    "Freedom": "0.479429",
+    "Trust": "0.218381",
+    "Generosity": "0.219619",
+    "Countries": "21.00"
+  },
+  {
+    "Region": "Latin America and Caribbean",
+    "Rank": "51.380952",
+    "Score": "5.954429",
+    "GDP": "0.924286",
+    "Family": "1.339714",
+    "Health": "0.811857",
+    "Freedom": "0.440905",
+    "Trust": "0.072048",
+    "Generosity": "0.144619",
+    "Countries": "24.00"
+  },
+  {
+    "Region": "Eastern Asia",
+    "Rank": "64.833333",
+    "Score": "5.688833",
+    "GDP": "1.235167",
+    "Family": "1.3335",
+    "Health": "0.953333",
+    "Freedom": "0.372167",
+    "Trust": "0.119667",
+    "Generosity": "0.172833",
+    "Countries": "6.00"
+  },
+  {
+    "Region": "Central and Eastern Europe",
+    "Rank": "70.965517",
+    "Score": "5.561517",
+    "GDP": "1.021069",
+    "Family": "1.338793",
+    "Health": "0.809517",
+    "Freedom": "0.357517",
+    "Trust": "0.061759",
+    "Generosity": "0.142724",
+    "Countries": "29.00"
+  },
+  {
+    "Region": "Southeastern Asia",
+    "Rank": "85.111111",
+    "Score": "5.273667",
+    "GDP": "0.93",
+    "Family": "1.246444",
+    "Health": "0.745333",
+    "Freedom": "0.543778",
+    "Trust": "0.123444",
+    "Generosity": "0.301778",
+    "Countries": "9.00"
+  },
+  {
+    "Region": "Middle East and Northern Africa",
+    "Rank": "85.611111",
+    "Score": "5.221",
+    "GDP": "1.059889",
+    "Family": "1.140111",
+    "Health": "0.755389",
+    "Freedom": "0.3125",
+    "Trust": "0.102389",
+    "Generosity": "0.154611",
+    "Countries": "20.00"
+  },
+  {
+    "Region": "Southern Asia",
+    "Rank": "115.857143",
+    "Score": "4.526857",
+    "GDP": "0.650286",
+    "Family": "0.986857",
+    "Health": "0.617",
+    "Freedom": "0.386286",
+    "Trust": "0.093429",
+    "Generosity": "0.234714",
+    "Countries": "7.00"
+  },
+  {
+    "Region": "Sub-Saharan Africa",
+    "Rank": "124.8",
+    "Score": "4.300050",
+    "GDP": "0.44375",
+    "Family": "0.916675",
+    "Health": "0.40755",
+    "Freedom": "0.33735",
+    "Trust": "0.0945",
+    "Generosity": "0.187725",
+    "Countries": "43.00"
+  }
+]
