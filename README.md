@@ -23,12 +23,10 @@ The were visualizations made using Vue, D3 and Chart.js.
 * `node`
 * `npm`
 
-![nodejs.png | width=100px](docs/nodejs.png)
-![vuejs.png | width=100px](docs/vuejs.png)
-![d3.png | width=100px](docs/d3.png)
-![chartjs.png | width=100px](docs/chartjs.png)
-
-<img src='docs/nodejs.png' width='25'>
+<img src='docs/nodejs.png' width='200'>
+<img src='docs/vuejs.png' width='200'>
+<img src='docs/d3.png' width='200'>
+<img src='docs/chartjs.png' width='200'>
 
 ## Project Setup
 
