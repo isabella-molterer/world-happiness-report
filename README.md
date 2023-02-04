@@ -34,13 +34,13 @@ The were visualizations made using Vue, D3 and Chart.js.
  
  <div style="display:flex">
      <div style="flex:1;padding-right:10px;">
-          <img src="docs/nodejs.png" width="200"/>
+          <img src="docs/nodejs.png" width="100"/>
      </div>
      <div style="flex:1;padding-left:10px;">
-          <img src="docs/nodejs.png" width="300"/>
+          <img src="docs/nodejs.png" width="100"/>
      </div>
      <div style="flex:1;padding-left:10px;">
-          <img src="docs/nodejs.png" width="400"/>
+          <img src="docs/nodejs.png" width="100"/>
      </div>
 </div>
  
