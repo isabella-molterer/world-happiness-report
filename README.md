@@ -28,7 +28,7 @@ The were visualizations made using Vue, D3 and Chart.js.
 ![d3.png | width=100px](docs/d3.png)
 ![chartjs.png | width=100px](docs/chartjs.png)
 
-
+<img src='docs/nodejs.png' width='25'>
 
 ## Project Setup
 
