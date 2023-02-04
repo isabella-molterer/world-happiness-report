@@ -32,13 +32,20 @@ The were visualizations made using Vue, D3 and Chart.js.
   </tr>
  </table>
  
- <img src='docs/nodejs.png' height='100'>|<img src='docs/nodejs.png' height='100'>
+ <div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img src="docs/nodejs.png" width="200"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img src="docs/nodejs.png" width="300"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img src="docs/nodejs.png" width="400"/>
+     </div>
+</div>
+ 
+ <img src='docs/nodejs.png' height='100'>  <img src='docs/nodejs.png' height='100'>
 
-<style>
-td, th {
-   border: none!important;
-}
-</style>
 
 ## Project Setup
 
