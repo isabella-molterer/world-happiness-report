@@ -23,7 +23,7 @@ The were visualizations made using Vue, D3 and Chart.js.
 * `node`
 * `npm`
 
-<table>
+<table style="border: none;">
   <tr>
     <td><img src='docs/nodejs.png' height='100'></td>
     <td><img src='docs/vuejs.png' height='100'></td>
