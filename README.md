@@ -25,27 +25,24 @@ The were visualizations made using Vue, D3 and Chart.js.
 
 <table>
   <tr>
-    <td><img src='docs/nodejs.png' height='100'></td>
-    <td><img src='docs/vuejs.png' height='100'></td>
-    <td><img src='docs/d3.png' height='100'></td>
-    <td><img src='docs/chartjs.png' height='100'></td>
+    <td style="border:none;"><img src='docs/nodejs.png' height='100'></td>
+    <td style="border:none;"><img src='docs/vuejs.png' height='100'></td>
+    <td style="border:none;"><img src='docs/d3.png' height='100'></td>
+    <td style="border:none;"><img src='docs/chartjs.png' height='100'></td>
   </tr>
  </table>
  
  <div style="display:flex">
-     <div style="flex:1;padding-right:10px;">
+     <div style="padding-right:10px;">
           <img src="docs/nodejs.png" width="100"/>
      </div>
-     <div style="flex:1;padding-left:10px;">
+     <div style="padding-left:10px;">
           <img src="docs/nodejs.png" width="100"/>
      </div>
-     <div style="flex:1;padding-left:10px;">
+     <div style="padding-left:10px;">
           <img src="docs/nodejs.png" width="100"/>
      </div>
 </div>
- 
- <img src='docs/nodejs.png' height='100'>  <img src='docs/nodejs.png' height='100'>
-
 
 ## Project Setup
 
