@@ -23,7 +23,7 @@ The were visualizations made using Vue, D3 and Chart.js.
 * `node`
 * `npm`
 
-<table style="border: none;">
+<table>
   <tr>
     <td><img src='docs/nodejs.png' height='100'></td>
     <td><img src='docs/vuejs.png' height='100'></td>
@@ -31,6 +31,14 @@ The were visualizations made using Vue, D3 and Chart.js.
     <td><img src='docs/chartjs.png' height='100'></td>
   </tr>
  </table>
+ 
+ <img src='docs/nodejs.png' height='100'>|<img src='docs/nodejs.png' height='100'>
+
+<style>
+td, th {
+   border: none!important;
+}
+</style>
 
 ## Project Setup
 
