@@ -1,0 +1,23 @@
+$color--primary: #FFEBA3; // #c70000;
+$color--white: #ffffff;
+$color--background: #112e51;
+
+/* breakpoints */
+$breakpoint--sm: 640px;
+$breakpoint--md: 768px;
+$breakpoint--lg: 1024px;
+$breakpoint--xl: 1280px;
+$breakpoint--xxl: 1536px;
+
+/* spacings */
+$space-unit: 1rem;
+
+$space-xs: calc($space-unit / 2);
+$space-sm: $space-unit;
+$space-md: calc($space-unit * 1.5);
+$space-lg: calc($space-unit * 2);
+$space-xl: calc($space-unit * 3);
+$space-xxl: calc($space-unit * 4);
+
+/* transitions */
+$transition--normal: all 300ms ease;
