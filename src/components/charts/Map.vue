@@ -63,14 +63,7 @@
 
                 svg.append("g")
                     .attr("class", "legendLog")
-                    .attr("transform", "translate(20,20)");
-
-                var logLegend = d3.legendColor()
-                    .cells([0.1, 5, 10, 50, 100, 500, 1000])
-                    .scale(log);
-
-                svg.select(".legendLog")
-                    .call(logLegend);
+                    .attr("transform", "translate(20,20)");             
             },
             onChg(event) {
                 idx = event.target.value;
@@ -97,6 +90,16 @@
                 let country = this.countryData[idx].filter(item => item.Country === name);
                 return country.length ? country[0].Score : "N/A";
             },
+            getPathId(target) {
+                let targetPath = null;
+                const targetClass = target.classList[0];
+
+                if (targetClass) {
+                    targetPath = targetClass.split('_')[1];
+                }
+                
+                return targetPath;
+            },
             drawMap(idx) {
                 let infobox = document.getElementById("country_info");
                 d3.json("https://unpkg.com/world-atlas@2.0.2/countries-110m.json")
@@ -114,16 +117,18 @@
                         .attr("class", (d, i) => {
                             return "path_" + i
                         })
-                        .on("mouseover", (d, i) => {
-                            d3.select(".path_" + i).attr("stroke", 'white').attr("stroke-width", '1.5');
-                            d3.select(".path_" + i).style("cursor", "pointer");
-                            let { name } = d.properties;
+                        .on("mouseover", (event, data) => {
+                            const name = data.properties.name;
+                            const id = this.getPathId(event.target);
+                            d3.select(".path_" + id).attr("stroke", 'white').attr("stroke-width", '1.5');
+                            d3.select(".path_" + id).style("cursor", "pointer");
                             let rank = this.getCountryRank(name, idx);
                             let score = this.getCountryScore(name, idx);
                             infobox.innerHTML = `<p><span>Country:</span> ${name}</p><p><span>Rank:</span> ${rank}</p><p><span>Score:</span> ${score}</p>`
                         })
-                        .on("mouseout", (d, i) => {
-                            d3.select(".path_" + i).attr("stroke", 'none');
+                        .on("mouseout", (event) => {
+                            const id = this.getPathId(event.target);
+                            d3.select(".path_" + id).attr("stroke", 'none');
                             infobox.innerHTML = `<p><span>Country:</span> -</p><p><span>Rank:</span> -</p><p><span>Score:</span> -</p>`
                         })
                         .attr("d", path)
