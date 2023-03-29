@@ -12,6 +12,8 @@ The World Happiness Report is an annual publication that ranks countries based o
 
 Source: [https://worldhappiness.report/](https://worldhappiness.report/)
 
+The project is deployed using Heroku and is available under: [https://world-happiness-report.herokuapp.com/](https://world-happiness-report.herokuapp.com/)
+
 Below you can find the description of the most important commands.
 
 
