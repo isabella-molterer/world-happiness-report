@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: $color--background;
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    text-align: left;
+}
+
+.container {
+    padding: 0 5%;
+    margin: 0 auto;
+    width: 100%;
+  
+    @media screen and (min-width: $breakpoint--sm) {
+      max-width: 640px;
+    }
+  
+    @media screen and (min-width: $breakpoint--md) {
+      max-width: 768px;
+    }
+  
+    @media screen and (min-width: $breakpoint--lg) {
+      max-width: 1024px;
+    }
+  
+    @media screen and (min-width: $breakpoint--xl) {
+      max-width: 1280px;
+    }
+  
+    @media screen and (min-width: $breakpoint--xxl) {
+      max-width: 1536px;
+    }
+}
+
+::selection {
+    color: $color--white;
+    background: $color--primary;
+}
+
+.footer {
+  background-color: lighten($color--background, 3%);
+  text-align: center;
+  padding: $space-sm;
+}
+  

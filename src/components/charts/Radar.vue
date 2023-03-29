@@ -15,9 +15,9 @@
 			<div class="steps">
 				<p class="label" id="info">1) Insert your personal happiness score!</p>
 				<div class="range-slider_wrapper">
-					<img src="../../assets/svg/sad.svg" alt="Sad Smiley">
+                    <span alt="Sad Smiley">&#128577;</span>
 					<input type="range" step="1" class="range-slider" min="0" v-bind:max="my_max" v-model="value" v-on:input="onChangeSldr($event)"/>
-					<img src="../../assets/svg/happy.svg" alt="Happy Smiley">
+                    <span alt="Happy Smiley">&#128578;</span>
 				</div>
 			</div>
 
@@ -217,7 +217,8 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    @import "../../assets/styles/abstracts/variables";
 	#message.alert {
 		color: #c70000;
 		font-weight: bolder;
@@ -228,31 +229,12 @@
 		margin: 10px 0 50px 0;
 	}
 
-	#user_input {
-		display: flex;
-		width: 80vw;
-		margin: 0 auto;
-		flex-wrap: wrap;
-	}
+    
+    #user_input {
+        text-align: left;
 
-	#user_input .steps {
-		flex-basis: 100%;
-		justify-content: space-evenly;
-		flex-direction: column;
-	}
-
-	@media (min-width:1200px) {
-		#user_input {
-			flex-wrap: nowrap;
-			width: 50vw;
-		}
-
-		#user_input .steps {
-			margin: 0 auto;
-			width: 100%;
-			justify-content: space-evenly;
-			flex-direction: row;
-			text-align: center;
-		}
-	}
+        @media screen and (min-width: $breakpoint--sm) {
+            text-align: center;
+        }
+    }
 </style>

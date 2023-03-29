@@ -1,32 +1,28 @@
 <template>
-	<div>
+	<div class="map">
 		<h2>How Happy is the World?</h2>
+        <p>On this map, you can see how the ranks and scores have changed between 2015 and 2019.
+            The blacked out countries didn't participate in the survey in that particular year.</p>
 
-		<div id="map_container">
-			<div class="intro">
-				<p>On this map, you can see how the ranks and scores have changed between 2015 and 2019.
-					The blacked out countries didn't participate in the survey in that particular year.</p>
-			</div>
 
-            <!-- User Input -->
-			<div id="slider_map">
-				<div>
-					<p class="label">Year: </p>
-					<input v-bind:value="0" v-on:input="onChg($event)" class="range-slider" id="timeslider" type="range" min="0" max="4" step="1"/>
-					<p id="time_range">2015</p>
-				</div>
-				<div id="country_info">
-					<p><span>Country:</span> -</p>
-					<p><span>Rank:</span> -</p>
-					<p><span>Score:</span> -</p>
-				</div>
-			</div>
+        <!-- User Input -->
+        <div id="map__data" class="data">
+            <div id="data__country" class="data__country">
+                <p><span>Country:</span> -</p>
+                <p><span>Rank:</span> -</p>
+                <p><span>Score:</span> -</p>
+            </div>
+            <div class="data__slider slider">
+                <input class="slider__input" type="range" min="0" max="4" step="1" v-bind:value="0" v-on:input="onChg($event)">
+                <p class="slider__value">Year&nbsp;<span id="rangeValue">2015</span></p>               
+            </div>
+        </div>
 
-            <!-- Chart -->
-			<div id="svg_map">
-				<svg id="map" width="100%" height="80vh" viewBox="250 -200 500 650"></svg>
-			</div>
-		</div>
+        <!-- Chart -->
+        <div id="svg_map">
+            <svg id="map" width="100%" height="80vh" viewBox="250 -200 500 650"></svg>
+        </div>
+
 	</div>
 </template>
 
@@ -68,7 +64,7 @@
             onChg(event) {
                 idx = event.target.value;
                 let time = ["2015", "2016", "2017", "2018", "2019"];
-                document.getElementById("time_range").innerHTML = time[idx];
+                document.getElementById("rangeValue").innerHTML = time[idx];
                 this.drawMap(idx);
             },
             getMinMax(property) {
@@ -101,7 +97,7 @@
                 return targetPath;
             },
             drawMap(idx) {
-                let infobox = document.getElementById("country_info");
+                let infobox = document.getElementById("data__country");
                 d3.json("https://unpkg.com/world-atlas@2.0.2/countries-110m.json")
                 .then((world) => {
                     let svg = d3.select("#map");
@@ -142,6 +138,3 @@
         }
     };
 </script>
-
-<style scoped>
-</style>

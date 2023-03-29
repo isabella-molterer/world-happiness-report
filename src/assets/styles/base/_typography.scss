@@ -1,0 +1,21 @@
+h1, h2 {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+
+h2 {
+    margin-top: 5vh;
+}
+
+body {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    color: $color--white;
+}
+
+a {
+    color: $color--white;
+    transition: $transition--normal;
+    
+    &:hover{
+        color: $color--primary;
+    }
+}
