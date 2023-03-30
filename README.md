@@ -12,6 +12,8 @@ The World Happiness Report is an annual publication that ranks countries based o
 
 Source: [https://worldhappiness.report/](https://worldhappiness.report/)
 
+Website: [https://world-happiness-report.netlify.app/](https://world-happiness-report.netlify.app/)
+
 Below you can find the description of the most important commands.
 
 

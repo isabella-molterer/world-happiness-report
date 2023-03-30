@@ -40,7 +40,6 @@
 <script>
 
     import * as d3 from 'd3'
-    import '../../assets/css/chart.css'
     import data_regions from '../data/region_means.json'
     import Chart from 'chart.js';
 

@@ -2,8 +2,12 @@ h1, h2 {
     font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
 
-h2 {
-    margin-top: 5vh;
+h1 {
+    margin-top: 5rem;
+
+    @media screen and (min-width: $breakpoint--lg) {
+        margin-top: 12rem;
+    }
 }
 
 body {
@@ -16,6 +20,6 @@ a {
     transition: $transition--normal;
     
     &:hover{
-        color: $color--primary;
+        text-decoration: none;
     }
 }

@@ -1,3 +1,8 @@
+#svg_map svg {
+    display: block;
+    margin: 0 auto;
+}
+
 .map {
     .data {
         display: flex;
@@ -33,6 +38,9 @@
         }
 
         &__country {
+            border: 1px solid lighten($color--background, 10%);
+            border-radius: 10px;
+            padding: 1rem;
             width: 100%;
             min-width: 300px;
 
@@ -47,13 +55,19 @@
         align-items: center;
         flex-direction: column;
         gap: $space-sm;
+        display: inline-block;
+        background: silver;
+        background: linear-gradient(to right, $color--white 1px, transparent 1px) repeat-x;
+        background-size: calc(100%/4 - 4px) 5px;
+        background-position: 10px top;
+        position: relative;
+        text-align: center;
 
         &__value {
-            margin: 0 auto;
+            margin-top: 1rem;
             display: inline-flex;
             border-radius: 2rem;
             padding: $space-sm;
-            text-align: center;
             color: #000;
             font-weight: 600;
             background-color: $color--white;
@@ -89,7 +103,6 @@
             opacity: 1;
         }
 
-        
         &::-webkit-slider-thumb,
         &::-moz-range-thumb {
             -webkit-appearance: none;

@@ -29,7 +29,6 @@
 
 <script>
     import * as d3 from 'd3'
-    import '../../assets/css/chart.css'
     import data19 from '../data/2019.json'
     import Chart from 'chart.js';
 

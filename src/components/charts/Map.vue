@@ -9,7 +9,7 @@
             </div>
             <div class="data__slider slider">
                 <input class="slider__input" type="range" min="0" max="4" step="1" v-bind:value="0" v-on:input="onChg($event)">
-                <p class="slider__value">Year&nbsp;<span id="rangeValue">2015</span></p>               
+                <p class="slider__value">Year&nbsp;<span id="rangeValue">2015</span></p>             
             </div>
         </div>
 
@@ -17,12 +17,10 @@
         <div id="svg_map">
             <svg id="map" width="100%" height="80vh" viewBox="250 -200 500 650"></svg>
         </div>
-
 	</div>
 </template>
 
 <script>
-    import '../../assets/css/chart.css'
     import * as d3 from 'd3'
     import * as topojson from "topojson-client"
     import data15 from '../data/2015.json'
@@ -45,11 +43,6 @@
         },
         methods: {
             setColorScale() {
-                let minMaxRank = this.getMinMax('Rank');
-                const log = d3.scaleLog()
-                    .domain([0, minMaxRank.min, minMaxRank.max])
-                    .range(["#fff", "#54b3f8", "#c70000"]);
-
                 var svg = d3.select("svg");
 
                 svg.append("g")
