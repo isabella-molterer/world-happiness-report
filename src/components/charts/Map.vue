@@ -22,7 +22,6 @@
 </template>
 
 <script>
-    import '../../assets/css/chart.css'
     import * as d3 from 'd3'
     import * as topojson from "topojson-client"
     import data15 from '../data/2015.json'

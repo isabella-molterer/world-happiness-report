@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <div class="container">
+    <TheHeader />
+
+    <div class="container content">
       <h1>World Happiness Report</h1>
       <div class="intro">
         <p>The happiness scores and rankings use data from the Gallup World Poll. The scores are based on answers to the main life evaluation question asked in the poll.
@@ -13,13 +15,16 @@
       </div>
 
       <!-- World map visualisation -->
-      <h2>How Happy is the World?</h2>
-      <p>On this map, you can see how the ranks and scores have changed between 2015 and 2019.
-          The blacked out countries didn't participate in the survey in that particular year.</p>
-      <Map/>
+      <section>
+        <h2 id="map-visualisation">How Happy is the World?</h2>
+        <p>On this map, you can see how the ranks and scores have changed between 2015 and 2019.
+            The blacked out countries didn't participate in the survey in that particular year.</p>
+        <Map/>
+      </section>
+
 
       <!-- Radar plot visualisation -->
-      <h2>How Happy are You?</h2>
+      <h2 id="radar-plot-visualisation">How Happy are You?</h2>
       <div class="intro">
         <p>In the example below you can compare two countries and explore how the six different metrics GDP, Family, Health, Freedom, Trust
           and Generosity contribute to their happiness.</p>
@@ -30,7 +35,7 @@
       <Radar/>
 
       <!-- Scatter plot visualisation -->
-      <h2>What influences the Happiness of the Regions?</h2>
+      <h2 id="scatter-plot-visualisation">What influences the Happiness of the Regions?</h2>
       <p>In the following scatter chart you can find out a bit more about the different regions in the world.
           In the happiness report, the world got divided in 10 different regions.
           You can explore the correlation between the average values of the 6 different metrics
@@ -38,11 +43,9 @@
           as well as the rank and the score of the different regions. </p>
       <Scatter/>
     </div>
-    <div class="footer">
-      <p>Source: <a target="_blank" href="https://worldhappiness.report/">https://worldhappiness.report/</a></p>
-      <p>Technologies used: D3, Vue and Chart.js</p>
-      <p>&copy; Isabella Molterer & Lisa-Maria Eibl</p>
-    </div>
+
+    <TheFooter />
+
   </div>
 </template>
 
@@ -50,21 +53,14 @@
   import Map from "./components/charts/Map.vue";
   import Radar from "./components/charts/Radar.vue";
   import Scatter from "./components/charts/Scatter.vue";
+  import TheHeader from "./components/TheHeader.vue";
+  import TheFooter from "./components/TheFooter.vue";
 
   export default {
     name: "app",
     components: {
-      Radar, Map, Scatter
+      Radar, Map, Scatter, TheHeader, TheFooter,
     },
-    data: function() {
-      return {
-        loadData: []
-      };
-    },
-    mounted() {
-    },
-    methods: {
-    }
   };
 </script>
 
