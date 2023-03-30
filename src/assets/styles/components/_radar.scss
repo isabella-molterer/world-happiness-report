@@ -1,3 +1,28 @@
-.slider {
-    width: 255px;
-}    
+.radarplot {
+    &__input {
+        text-align: left;
+        margin: 0 auto 2rem;
+        width: 100%;
+
+        @media screen and (min-width: $breakpoint--sm) {
+            text-align: center;
+            width: 50%;
+            max-width: 450px;
+        }
+
+        .select {
+            display: block;
+        }
+
+        .slider {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+        
+            &__input {
+                flex-grow: 1;
+            }
+        } 
+    }
+}
+  

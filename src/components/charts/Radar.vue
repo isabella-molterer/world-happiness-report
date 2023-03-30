@@ -1,37 +1,27 @@
 <template>
-	<div>
-		<h2>How Happy are You?</h2>
-		<div class="intro">
-			<p>In the example below you can compare two countries and explore how the six different metrics GDP, Family, Health, Freedom, Trust
-				and Generosity contribute to their happiness.</p>
-			<p>	First you can set the first country by choosing a value on the slider to find out which country comes closest to your personal
-				happiness score! Afterwards you can choose any other country in the dropdown menu of step 2) to compare.</p>
-			<p>To start with, we assumed you probably want to check out the happiest (Finland) and unhappiest country (South Sudan) of year the 2019.</p>
-		</div>
-
+	<div class="radarplot has-backgound-light">
 		<!-- User Input -->
-		<div id="user_input">
-			<!-- Slider: Personal Score -->
-			<div class="steps">
+		<div class="radarplot__input">
+			<!-- Range Slider: Personal Score -->
+			<div class="range__slider-wrapper">
 				<p class="label" id="info">1) Insert your personal happiness score!</p>
-				<div class="range-slider_wrapper">
+				<div class="range__slider slider">
                     <span alt="Sad Smiley">&#128577;</span>
-					<input type="range" step="1" class="range-slider" min="0" v-bind:max="my_max" v-model="value" v-on:input="onChangeSldr($event)"/>
+					<input type="range" step="1" class="slider__input" min="0" v-bind:max="my_max" v-model="value" v-on:input="onChangeSldr($event)"/>
                     <span alt="Happy Smiley">&#128578;</span>
 				</div>
 			</div>
 
 			<!-- Dropdown: Comparison Country -->
-			<div class="steps">
+			<div class="select">
 				<p class="label" id="message">2) Compare to another country!</p>
-				<select @change="onChangeDropdwn($event)" id="selectButton" class="dropdown-selection"></select>
+				<select @change="onChangeDropdwn($event)" id="selectButton" class="select__dropdown"></select>
 			</div>
-
 		</div>
 
 		<!-- Chart -->
-		<div id="chart-container">
-			<canvas id="myChart" width="400" height="400"></canvas>
+		<div class="radarplot__plot-wrapper">
+			<canvas id="radarplot" width="400" height="400"></canvas>
 		</div>
 	</div>
 
@@ -63,7 +53,7 @@
                     opt.selected = 'selected';
                 }
             }
-            var ctx = document.getElementById('myChart').getContext('2d');
+            var ctx = document.getElementById('radarplot').getContext('2d');
 
             // default countries
             let ctry1 = this.data.filter((item) => item.Score === this.getMinMax('Score').max)[0]; // happiest country
@@ -149,7 +139,7 @@
                     warning.innerHTML = ctry.Country + ' did not take part in the survey of 2019!';
                     warning.classList.add('alert');
                 } else {
-                    warning.innerHTML = '2) You chose ' + ctry.Country;
+                    warning.innerHTML = '2) Country of comparison: ' + ctry.Country;
                 }
                 chart.data.datasets[1].data = [ctry.GDP, ctry.Family, ctry.Health, ctry.Freedom, ctry.Trust, ctry.Generosity];
                 chart.data.datasets[1].label = ctry.Country + ' (Rank: ' + ctry.Rank +')';
@@ -228,13 +218,4 @@
 		display: block;
 		margin: 10px 0 50px 0;
 	}
-
-    
-    #user_input {
-        text-align: left;
-
-        @media screen and (min-width: $breakpoint--sm) {
-            text-align: center;
-        }
-    }
 </style>

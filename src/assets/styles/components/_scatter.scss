@@ -1,0 +1,63 @@
+.scatterplot {
+    &__input {
+        display: flex;
+        width: 100%;
+        margin: 0 auto 1rem;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+
+        @media screen and (min-width: $breakpoint--lg) {
+            width: 80%;
+        }
+
+        @media screen and (min-width: $breakpoint--xl) {
+            width: 50%;
+        }
+    }
+
+    &__legend {
+        ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            padding: 0;
+            gap: $space-sm;
+        }
+
+        li {
+            color: black;
+            font-weight: bolder;
+            padding: 0.5rem;
+            border-radius: 100px;
+            font-size: 0.8rem;
+
+            @media screen and (min-width: $breakpoint--md) {
+                font-size: 1rem;
+            }
+        }
+
+        li:nth-of-type(1) { background: #a6cee3; }
+        li:nth-of-type(2) { 
+            background: #1f78b4; 
+            color: $color--white;
+        }
+        li:nth-of-type(3) { background: #b2df8a; }
+        li:nth-of-type(4) { background: #33a02c; }
+        li:nth-of-type(5) { background: #fb9a99; }
+        li:nth-of-type(6) { 
+            background: #e31a1c; 
+            color: $color--white;
+        }
+        li:nth-of-type(7) { background: #fdbf6f; }
+        li:nth-of-type(8) { background: #ff7f00; }
+        li:nth-of-type(9) { background: #cab2d6; }
+        li:nth-of-type(10) { 
+            background: #6a3d9a; 
+            color: $color--white;
+        }
+    }
+}
+
