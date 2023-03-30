@@ -1,10 +1,5 @@
 <template>
-	<div class="map">
-		<h2>How Happy is the World?</h2>
-        <p>On this map, you can see how the ranks and scores have changed between 2015 and 2019.
-            The blacked out countries didn't participate in the survey in that particular year.</p>
-
-
+	<div class="map has-backgound-light">
         <!-- User Input -->
         <div id="map__data" class="data">
             <div id="data__country" class="data__country">
@@ -51,7 +46,7 @@
         methods: {
             setColorScale() {
                 let minMaxRank = this.getMinMax('Rank');
-                var log = d3.scaleLog()
+                const log = d3.scaleLog()
                     .domain([0, minMaxRank.min, minMaxRank.max])
                     .range(["#fff", "#54b3f8", "#c70000"]);
 

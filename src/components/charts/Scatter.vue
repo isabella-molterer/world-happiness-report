@@ -1,46 +1,38 @@
 <template>
-    <div>
-        <h2>What influences the Happiness of the Regions?</h2>
-        <div class="intro">
-            <p>In the following scatter chart you can find out a bit more about the different regions in the world.
-                In the happiness report, the world got divided in 10 different regions.
-                You can explore the correlation between the average values of the 6 different metrics
-                (GDP, Family, Health, Freedom, Trust and Generosity),
-                as well as the rank and the score of the different regions. </p>
-        </div>
+    <div class="scatterplot has-backgound-light">
         <!-- User Input -->
-        <div id="user_input">
+        <div class="scatterplot__input">
             <!-- X Metric -->
-            <div class="steps">
-                <p class="label">X:</p>
-                <select @change="onXchange($event)" id="x-select" class="dropdown-selection"></select>
+            <div class="select">
+                X:
+                <select @change="onXchange($event)" id="x-select" class="select__dropdown"></select>
             </div>
 
             <!-- Y Metric -->
-            <div class="steps">
-                <p class="label">Y:</p>
-                <select @change="onYchange($event)" id="y-select" class="dropdown-selection"></select>
+            <div class="select">
+                Y:
+                <select @change="onYchange($event)" id="y-select" class="select__dropdown"></select>
             </div>
 
         </div>
+        <!-- Chart -->
+        <div class="scatterplot__plot-wrapper">
+            <canvas id="plot" width="400" height="400"></canvas>
+        </div>
         <!-- Legend -->
-        <div class="legend">
+        <div class="scatterplot__legend">
             <ul>
                 <li>Australia and New Zealand</li>
-                <li>Western Europe</li>
-                <li>Eastern Asia</li>
-                <li>Southeastern Asia</li>
-                <li>Southern Asia</li>
                 <li>North America</li>
+                <li>Western Europe</li>
                 <li>Latin America and Caribbean</li>
+                <li>Eastern Asia</li>
                 <li>Central and Eastern Europe</li>
                 <li>Middle East and Northern Africa</li>
+                <li>Southeastern Asia</li>
+                <li>Southern Asia</li>
                 <li>Sub-Saharan Africa</li>
             </ul>
-        </div>
-        <!-- Chart -->
-        <div id="chart-container">
-            <canvas id="scatter" width="400" height="400"></canvas>
         </div>
     </div>
 </template>
@@ -69,7 +61,7 @@
         },
         mounted() {
             this.createDropdown();
-            var ctx = document.getElementById('scatter').getContext('2d');
+            var ctx = document.getElementById('plot').getContext('2d');
 
 
             var pointBackgroundColors = ["#a6cee3", "#1f78b4",
@@ -201,36 +193,4 @@
             }
         }
     }
-
 </script>
-
-<style scoped>
-    #user_input {
-        display: flex;
-        width: 80vw;
-        margin: 0 auto;
-        flex-wrap: wrap;
-    }
-
-    #user_input .steps {
-        flex-basis: 100%;
-        justify-content: space-evenly;
-        flex-direction: column;
-    }
-
-
-    @media (min-width:1200px) {
-        #user_input {
-            flex-wrap: nowrap;
-            width: 50vw;
-        }
-
-        #user_input .steps {
-            margin: 0 auto;
-            width: 100%;
-            justify-content: space-evenly;
-            flex-direction: row;
-            text-align: center;
-        }
-    }
-</style>
