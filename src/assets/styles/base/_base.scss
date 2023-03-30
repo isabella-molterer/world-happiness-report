@@ -2,12 +2,6 @@
     box-sizing: border-box;
 }
 
-#app {
-  position: relative;
-  width: 100vw;
-  top: 0;
-}
-
 html,
 body {
     background-color: $color--background;
@@ -16,6 +10,14 @@ body {
     overflow-x: hidden;
     margin: 0;
     text-align: left;
+}
+
+p {
+  line-height: 1.5;
+}
+
+section {
+    padding-top: 70px;
 }
 
 .container {
@@ -28,7 +30,6 @@ body {
     }
   
     @media screen and (min-width: $breakpoint--md) {
-      padding: 0;
       max-width: 768px;
     }
   
@@ -54,7 +55,7 @@ body {
   background-color: lighten($color--background, 3%);
   position: relative;
   padding: 2rem 0;
-  margin: 3rem 0;
+  margin-top: 3rem;
 
   &::before,
   &::after {

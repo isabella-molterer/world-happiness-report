@@ -7,8 +7,8 @@
           <span></span>
           <span></span>
           <span></span>
-          <ul class="menu">
-            <a href="#map-visualisation"><li>Map Visualisation</li></a>
+          <ul id="menu" class="menu">
+            <a href="#map-visualisation"><li>Heat map</li></a>
             <a href="#radar-chart-visualisation"><li>Radar chart</li></a>
             <a href="#scatter-plot-visualisation"><li>Scatter plot</li></a>
             <a class="menu__item item-github" href="https://github.com/isabella-molterer/world-happiness-report" target="_blank"><li>GitHub Repository</li></a>

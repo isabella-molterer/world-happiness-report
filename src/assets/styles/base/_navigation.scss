@@ -115,22 +115,22 @@
     }
 
     @media screen and (min-width: $breakpoint--md) {
-        --widthA: calc(100vw - 768px);
+        --widthA: calc(90vw - 768px);
         left: calc(100% - 768px - var(--widthA) / 2);
     }
 
     @media screen and (min-width: $breakpoint--lg) {
-        --widthA: calc(100vw - 1024px);
+        --widthA: calc(90vw - 1024px);
         left: calc(100% - 1024px - var(--widthA) / 2);
     }
 
     @media screen and (min-width: $breakpoint--xl) {
-        --widthA: calc(100vw - 1280px);
+        --widthA: calc(90vw - 1280px);
         left: calc(100% - 1280px - var(--widthA) / 2);
     }
 
     @media screen and (min-width: $breakpoint--xxl) {
-        --widthA: calc(100vw - 1536px);
+        --widthA: calc(90vw - 1536px);
         left: calc(100% - 1536px - var(--widthA) / 2);
     }
 

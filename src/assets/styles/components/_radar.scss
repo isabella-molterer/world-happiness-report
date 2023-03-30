@@ -18,6 +18,10 @@
             display: flex;
             flex-wrap: nowrap;
             justify-content: center;
+
+            span {
+                font-size: 1.5rem;
+            }
         
             &__input {
                 flex-grow: 1;
