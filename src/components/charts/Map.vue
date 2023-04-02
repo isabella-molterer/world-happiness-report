@@ -8,7 +8,7 @@
                 <p><span>Score:</span> -</p>
             </div>
             <div class="data__slider slider">
-                <input class="slider__input" type="range" min="0" max="4" step="1" v-bind:value="0" v-on:input="onChg($event)">
+                <input class="slider__input" type="range" min="0" max="8" step="1" v-bind:value="0" v-on:input="onChg($event)">
                 <p class="slider__value">Year&nbsp;<span id="rangeValue">2015</span></p>             
             </div>
         </div>
@@ -28,6 +28,10 @@
     import data17 from '../data/2017.json'
     import data18 from '../data/2018.json'
     import data19 from '../data/2019.json'
+    import data20 from '../data/2020.json'
+    import data21 from '../data/2021.json'
+    import data22 from '../data/2022.json'
+    import data23 from '../data/2023.json'
 
     let idx = 0;
 
@@ -35,7 +39,7 @@
         name: 'Map',
         data()  {
             return {
-                countryData: [ data15, data16, data17, data18, data19 ]
+                countryData: [ data15, data16, data17, data18, data19, data20, data21, data22, data23 ]
             }
         },
         mounted() {
@@ -51,7 +55,7 @@
             },
             onChg(event) {
                 idx = event.target.value;
-                let time = ["2015", "2016", "2017", "2018", "2019"];
+                let time = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"]; // adjust
                 document.getElementById("rangeValue").innerHTML = time[idx];
                 this.drawMap(idx);
             },

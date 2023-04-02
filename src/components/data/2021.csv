@@ -1,0 +1,150 @@
+﻿Country;Region;Rank;Score;GDP;Family;Health;Freedom;Trust;Generosity
+Afghanistan;Southern Asia;1;2523;7695;463;52493;382;924;-102
+Zimbabwe;Sub-Saharan Africa;2;3145;7943;750;56201;677;821;-47
+Rwanda;Sub-Saharan Africa;3;3415;7676;552;61400;897;167;61
+Botswana;Sub-Saharan Africa;4;3467;9782;784;59269;824;801;-246
+Lesotho;Sub-Saharan Africa;5;3512;7926;787;48700;715;915;-131
+Malawi;Sub-Saharan Africa;6;3600;6958;537;57948;780;729;38
+Haiti;Latin America and Caribbean;7;3615;7477;540;55700;593;721;422
+Tanzania;Sub-Saharan Africa;8;3623;7876;702;57999;833;577;183
+Yemen;Middle East and Northern Africa;9;3658;7578;832;57122;602;800;-147
+Burundi;Sub-Saharan Africa;10;3775;6635;490;53400;626;607;-24
+India;Southern Asia;11;3819;8755;603;60633;893;774;89
+Sierra Leone;Sub-Saharan Africa;12;3849;7434;630;51651;717;866;84
+Zambia;Sub-Saharan Africa;13;4073;8145;708;55809;782;823;61
+Togo;Sub-Saharan Africa;14;4107;7362;569;54914;619;772;32
+Madagascar;Sub-Saharan Africa;15;4208;7396;686;59305;552;803;-5
+Mauritania;Sub-Saharan Africa;16;4227;8542;795;57161;561;731;-106
+Ethiopia;Sub-Saharan Africa;17;4275;7694;764;59000;752;761;82
+Egypt;Middle East and Northern Africa;18;4283;9367;750;61998;749;795;-182
+Comoros;Sub-Saharan Africa;19;4289;8031;626;57349;548;781;82
+Swaziland;Sub-Saharan Africa;20;4308;9065;770;50833;647;708;-185
+Sri Lanka;Southern Asia;21;4325;9470;827;67299;841;863;79
+Chad;Sub-Saharan Africa;22;4355;7364;619;48478;579;807;41
+Jordan;Middle East and Northern Africa;23;4395;9182;767;67000;755;705;-167
+Myanmar;Southeastern Asia;24;4426;8541;779;59302;876;660;509
+Palestinian Territories;Middle East and Northern Africa;25;4517;8485;826;62250;653;821;-163
+Namibia;Sub-Saharan Africa;26;4574;9161;818;56799;719;847;-149
+Lebanon;Middle East and Northern Africa;27;4584;9626;848;67355;525;898;-73
+Tunisia;Middle East and Northern Africa;28;4596;9266;691;67201;656;870;-201
+Kenya;Sub-Saharan Africa;29;4607;8361;688;60704;779;825;287
+Liberia;Sub-Saharan Africa;30;4625;7288;720;56498;735;850;50
+Uganda;Sub-Saharan Africa;31;4636;7677;781;56101;709;855;122
+Iran;Middle East and Northern Africa;32;4721;9584;710;66300;608;714;218
+Mali;Sub-Saharan Africa;33;4723;7744;724;51969;697;827;-36
+Nigeria;Sub-Saharan Africa;34;4759;8533;740;50102;737;878;37
+Mozambique;Sub-Saharan Africa;35;4794;7158;744;54706;882;684;61
+Cambodia;Southeastern Asia;36;4830;8360;765;62000;959;843;34
+Burkina Faso;Sub-Saharan Africa;37;4834;7678;672;54151;695;748;-9
+Gabon;Sub-Saharan Africa;38;4852;9603;776;59962;731;840;-200
+Iraq;Middle East and Northern Africa;39;4854;9240;746;60583;630;875;-53
+Ukraine;Central and Eastern Europe;40;4875;9436;888;64902;724;924;-11
+Algeria;Middle East and Northern Africa;41;4887;9342;802;66005;480;752;-67
+Georgia;Central and Eastern Europe;42;4891;9585;671;64300;783;655;-238
+Venezuela;Latin America and Caribbean;43;4892;9073;861;66700;615;827;-169
+Morocco;Middle East and Northern Africa;44;4918;8903;560;66208;774;801;-236
+Pakistan;Southern Asia;45;4934;8458;651;58709;726;787;98
+Turkey;Middle East and Northern Africa;46;4948;10240;822;67199;576;776;-139
+South Africa;Sub-Saharan Africa;47;4956;9403;860;56904;749;860;-67
+Guinea;Sub-Saharan Africa;48;4984;7838;639;55008;697;766;95
+Bangladesh;Southern Asia;49;5025;8454;693;64800;877;682;-41
+Laos;Southeastern Asia;50;5030;8947;728;58968;910;658;123
+Benin;Sub-Saharan Africa;51;5045;8087;489;54713;757;661;-34
+Gambia;Sub-Saharan Africa;52;5051;7686;690;55160;697;746;424
+Turkmenistan;Central and Eastern Europe;53;5066;9629;983;62409;877;888;273
+Niger;Sub-Saharan Africa;54;5074;7098;641;53780;806;693;18
+Ghana;Sub-Saharan Africa;55;5088;8580;727;57586;807;848;123
+North Macedonia;Central and Eastern Europe;56;5101;9693;805;65474;751;905;38
+Albania;Central and Eastern Europe;57;5117;9520;697;68999;785;901;-30
+Senegal;Sub-Saharan Africa;58;5132;8118;710;59802;695;801;-46
+Cameroon;Sub-Saharan Africa;59;5142;8189;710;53515;731;848;26
+Azerbaijan;Central and Eastern Europe;60;5171;9569;836;65656;814;506;-223
+Maldives;Southern Asia;61;5198;9826;913;70600;854;825;24
+Bulgaria;Central and Eastern Europe;62;5266;10016;931;67000;788;932;-96
+Nepal;Southern Asia;63;5269;8120;774;64233;782;727;152
+Armenia;Central and Eastern Europe;64;5283;9487;799;67055;825;629;-168
+Ivory Coast;Sub-Saharan Africa;65;5306;8551;644;50114;741;794;-16
+China;Eastern Asia;66;5339;9673;811;69593;904;755;-146
+Congo (Brazzaville);Sub-Saharan Africa;67;5342;8117;636;58221;695;745;-68
+Indonesia;Southeastern Asia;68;5345;9365;811;62236;873;867;542
+Malaysia;Southeastern Asia;69;5384;10238;817;67102;895;839;125
+Libya;Middle East and Northern Africa;70;5410;9622;827;62300;771;667;-87
+Vietnam;Southeastern Asia;71;5411;8973;850;68034;940;796;-98
+Tajikistan;Central and Eastern Europe;72;5466;8091;860;64281;832;553;-56
+Russia;Central and Eastern Europe;73;5477;10189;903;64703;718;845;-111
+Hong Kong S.A.R. of China;Eastern Asia;74;5477;11000;836;76820;717;403;67
+Belarus;Central and Eastern Europe;75;5534;9853;910;66253;650;627;-180
+North Cyprus;Western Europe;76;5536;10576;820;73898;795;626;12
+Dominican Republic;Latin America and Caribbean;77;5545;9802;853;66102;860;714;-133
+Montenegro;Central and Eastern Europe;78;5581;9940;858;68699;708;812;-34
+Paraguay;Latin America and Caribbean;79;5653;9448;893;65900;876;882;28
+Mongolia;Eastern Asia;80;5677;9400;935;62500;708;856;116
+Bolivia;Latin America and Caribbean;81;5716;9046;810;63901;875;839;-77
+Greece;Western Europe;82;5723;10279;823;72600;582;823;-288
+Kyrgyzstan;Central and Eastern Europe;83;5744;8538;893;64401;935;908;119
+Ecuador;Latin America and Caribbean;84;5764;9313;821;68800;842;843;-124
+Moldova;Central and Eastern Europe;85;5766;9454;857;65699;822;918;-79
+Bosnia and Herzegovina;Central and Eastern Europe;86;5813;9590;870;68098;706;931;113
+Peru;Latin America and Caribbean;87;5840;9458;832;68250;822;891;-154
+South Korea;Eastern Asia;88;5845;10651;799;73900;672;727;-83
+Philippines;Southeastern Asia;89;5880;9076;830;62000;917;742;-97
+Croatia;Central and Eastern Europe;90;5882;10217;924;70799;754;939;-118
+Honduras;Latin America and Caribbean;91;5919;8648;812;67300;857;809;81
+Argentina;Latin America and Caribbean;92;5929;9962;898;69000;828;834;-182
+Portugal;Western Europe;93;5929;10421;879;72600;892;887;-244
+Japan;Eastern Asia;94;5940;10611;884;75100;796;638;-258
+Nicaragua;Latin America and Caribbean;95;5972;8620;864;67657;836;664;20
+Thailand;Southeastern Asia;96;5985;9805;888;67401;884;895;287
+Hungary;Central and Eastern Europe;97;5992;10358;943;68000;755;876;-186
+Colombia;Latin America and Caribbean;98;6012;9557;847;68001;837;841;-135
+Latvia;Central and Eastern Europe;99;6032;10315;927;67100;715;800;-162
+Mauritius;Sub-Saharan Africa;100;6049;10008;905;66701;867;789;-54
+El Salvador;Latin America and Caribbean;101;6061;9054;762;66402;888;688;-110
+Serbia;Central and Eastern Europe;102;6078;9787;873;68600;778;835;2
+Kuwait;Middle East and Northern Africa;103;6106;10817;843;66900;867;736;-104
+Romania;Central and Eastern Europe;104;6140;10284;832;67355;845;938;-219
+Kazakhstan;Central and Eastern Europe;105;6152;10155;952;65200;853;733;-69
+Poland;Central and Eastern Europe;106;6166;10382;898;69702;841;735;-165
+Chile;Latin America and Caribbean;107;6172;10071;882;70000;742;830;-44
+Uzbekistan;Central and Eastern Europe;108;6179;8836;918;65255;970;515;311
+Panama;Latin America and Caribbean;109;6180;10350;896;69652;872;856;-166
+Estonia;Central and Eastern Europe;110;6189;10481;941;68800;909;527;-106
+Cyprus;Western Europe;111;6223;10576;802;73898;763;844;-15
+Lithuania;Central and Eastern Europe;112;6255;10499;935;67906;773;826;-203
+Jamaica;Latin America and Caribbean;113;6309;9186;877;67500;890;884;-137
+Mexico;Latin America and Caribbean;114;6317;9859;831;68597;862;799;-147
+Brazil;Latin America and Caribbean;115;6330;9577;882;66601;804;756;-71
+Slovakia;Central and Eastern Europe;116;6331;10369;936;69201;766;911;-124
+Kosovo;Central and Eastern Europe;117;6372;9318;821;63813;869;917;257
+Singapore;Southeastern Asia;118;6377;11488;915;76953;927;82;-18
+Uruguay;Latin America and Caribbean;119;6431;9966;925;69100;896;590;-92
+Guatemala;Latin America and Caribbean;120;6435;9053;813;64958;906;775;-38
+Slovenia;Central and Eastern Europe;121;6461;10529;948;71400;949;806;-101
+Italy;Western Europe;122;6483;10623;880;73800;693;866;-84
+Spain;Western Europe;123;6491;10571;932;74700;761;745;-81
+Saudi Arabia;Middle East and Northern Africa;124;6494;10743;891;66603;877;684;-149
+United Arab Emirates;Middle East and Northern Africa;125;6561;11085;844;67333;932;589;74
+Taiwan Province of China;Eastern Asia;126;6584;10871;898;69600;784;721;-70
+Malta;Western Europe;127;6602;10674;931;72200;927;653;133
+Bahrain;Middle East and Northern Africa;128;6647;10669;862;69495;925;722;89
+France;Western Europe;129;6690;10704;942;74000;822;571;-147
+Belgium;Western Europe;130;6834;10823;906;72199;783;646;-153
+United States of America;North America;131;6951;11023;920;68200;837;698;98
+Czech Republic;Central and Eastern Europe;132;6965;10556;947;70807;858;868;-208
+United Kingdom;Western Europe;133;7064;10707;934;72500;859;459;233
+Costa Rica;Latin America and Caribbean;134;7069;9880;891;71400;934;809;-126
+Ireland;Western Europe;135;7085;11342;947;72400;879;363;77
+Canada;North America;136;7103;10776;926;73800;915;415;89
+Germany;Western Europe;137;7155;10873;903;72500;875;460;11
+Israel;Middle East and Northern Africa;138;7157;10575;939;73503;800;753;31
+Australia;Australia and New Zealand;139;7183;10796;940;73900;914;442;159
+Austria;Western Europe;140;7268;10906;934;73300;908;481;42
+New Zealand;Australia and New Zealand;141;7277;10643;948;73400;929;242;134
+Luxembourg;Western Europe;142;7324;11647;908;72600;907;386;-34
+Sweden;Western Europe;143;7363;10867;934;72700;945;237;86
+Norway;Western Europe;144;7392;11053;954;73300;960;270;93
+Netherlands;Western Europe;145;7464;10932;942;72400;913;338;175
+Iceland;Western Europe;146;7554;10878;983;73000;955;673;160
+Switzerland;Western Europe;147;7571;11117;942;74400;919;292;25
+Denmark;Western Europe;148;7620;10933;954;72700;946;179;30
+Finland;Western Europe;149;7842;10775;954;72000;949;186;-98

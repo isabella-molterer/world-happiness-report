@@ -480,7 +480,7 @@
     "Generosity": "N/A"
   },
   {
-    "Country": "Dominican Republic",
+    "Country": "Dominican Rep.",
     "Region": "Latin America and Caribbean",
     "Rank": 83,
     "Score": 5.302,
@@ -816,7 +816,7 @@
     "Generosity": 0.137
   },
   {
-    "Country": "Ivory Coast",
+    "Country": "Côte d'Ivoire",
     "Region": "Sub-Saharan Africa",
     "Rank": 107,
     "Score": 4.671,
@@ -1656,7 +1656,7 @@
     "Generosity": "N/A"
   },
   {
-    "Country": "Swaziland",
+    "Country": "eSwatini",
     "Region": "Sub-Saharan Africa",
     "Rank": "N/A",
     "Score": "N/A",

@@ -58,7 +58,7 @@
         display: inline-block;
         background: silver;
         background: linear-gradient(to right, $color--white 1px, transparent 1px) repeat-x;
-        background-size: calc(100%/4 - 4px) 5px;
+        background-size: calc(100%/8 - 2px) 5px;
         background-position: 10px top;
         position: relative;
         text-align: center;
