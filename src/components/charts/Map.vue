@@ -15,7 +15,7 @@
 
         <!-- Chart -->
         <div id="svg_map">
-            <svg id="map" width="100%" height="80vh" viewBox="250 -200 500 650"></svg>
+            <svg id="map" viewBox="0 -150 1000 600" fill="#fff" preserveAspectRatio="none"></svg>
         </div>
 	</div>
 </template>
