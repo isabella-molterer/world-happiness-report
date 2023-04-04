@@ -12,7 +12,7 @@
 This project contains the code for various web visualisations based on the data of the World Happiness Reports years 2015-2023.
 The World Happiness Report is an annual publication that ranks countries based on how happy their citizens perceive themselves to be. It takes into account factors such as income, social support, life expectancy, freedom to make life choices, generosity and trust in government and perceived corruption.
 
-Original Source: [https://worldhappiness.report/](https://worldhappiness.report/)
+Original Source: [https://worldhappiness.report/](https://worldhappiness.report/)  
 Data Source: [https://www.kaggle.com/datasets/mathurinache/world-happiness-report](https://www.kaggle.com/datasets/mathurinache/world-happiness-report)
 
 Website: [https://world-happiness-report.netlify.app/](https://world-happiness-report.netlify.app/)
@@ -55,8 +55,6 @@ $ npm run dev
 $ npm run build
 ```
 
-### Lint with ESLint
-tba
 
 
 ## Project Contributers
