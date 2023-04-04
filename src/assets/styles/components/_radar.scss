@@ -14,19 +14,29 @@
             display: block;
         }
 
-        .slider {
+        .slider-wrapper {
             display: flex;
             flex-wrap: nowrap;
             justify-content: center;
 
-            span {
+            & > span {
                 font-size: 1.5rem;
             }
         
-            &__input {
+            .slider {
+                margin-top: 0.7rem;
                 flex-grow: 1;
+
+                input {
+                    width: 100%;
+                }
             }
         } 
+
+        .alert {
+            color: #c70000;
+            font-weight: bolder;
+        }
     }
 }
   

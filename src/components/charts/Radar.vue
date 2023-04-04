@@ -5,9 +5,12 @@
 			<!-- Range Slider: Personal Score -->
 			<div class="range__slider-wrapper">
 				<p class="label" id="info">1) Insert your personal happiness score!</p>
-				<div class="range__slider slider">
+				<div class="range__slider-wrapper slider-wrapper">
                     <span alt="Sad Smiley">&#128577;</span>
-					<input type="range" step="1" class="slider__input" min="0" v-bind:max="my_max" v-model="value" v-on:input="onChangeSldr($event)"/>
+                    <div class="range__slider slider">
+                        <input class="slider__input" type="range" step="1"  min="0" :max="maxRank" v-model="currentValue" v-on:input="onChangeSlider($event)"/>
+                        <p class="slider__value">Score:&nbsp;<span id="rangeValue">{{ currentScore }}</span></p>      
+                    </div>
                     <span alt="Happy Smiley">&#128578;</span>
 				</div>
 			</div>
@@ -29,7 +32,7 @@
 
 <script>
     import * as d3 from 'd3'
-    import data19 from '../data/2019.json'
+    import data from '../../assets/data/2022.json'
     import Chart from 'chart.js';
 
     let chart;
@@ -38,25 +41,27 @@
         name: 'Radar',
         data()  {
             return {
-                data: data19,
-                cur_val: (d3.min(data19, (d) => +d['Rank'])),
-                my_max: (data19.filter((item) => item.Score !== 'N/A').length - 1), // 154
-                value: (d3.max(data19, (d) => +d['Rank']))
+                data: data,
+                updateValue: (d3.min(data, (d) => +d['Rank'])),
+                maxRank: (data.filter((item) => item.Score !== 'N/A').length),
+                currentScore: '---',
+                currentValue: (d3.max(data, (d) => +d['Rank']))
             };
         },
         mounted() {
             this.createDropdown(this.data);
             let options = document.getElementById("selectButton").getElementsByTagName("option");
-            for (let opt of options) {
-                if (opt.innerText === "S. Sudan") {
-                    opt.selected = 'selected';
+            for (let option of options) {
+                if (option.innerText === "Afghanistan") {
+                    option.selected = 'selected';
                 }
             }
-            var ctx = document.getElementById('radarplot').getContext('2d');
-
+            const ctx = document.getElementById('radarplot').getContext('2d');
+            
             // default countries
-            let ctry1 = this.data.filter((item) => item.Score === this.getMinMax('Score').max)[0]; // happiest country
-            let ctry2 = this.data.filter((item) => item.Score === this.getMinMax('Score').min)[0]; // unhappiest country
+            const country1 = this.data.filter((item) => item.Score == this.getMinMax('Score').max)[0]; // happiest country
+            const country2 = this.data.filter((item) => item.Score == this.getMinMax('Score').min)[0]; // unhappiest country
+            this.currentScore = country1.Score;
 
             Chart.defaults.global.defaultFontFamily = "Lato";
             chart = new Chart(ctx, {
@@ -65,12 +70,11 @@
                 data: {
                     labels: ['GDP', 'Family', 'Health', 'Freedom', 'Trust', 'Generosity'],
                     datasets: [
-                        this.createDatasets(ctry1, '59, 124, 171', '#89d8fa'),
-                        this.createDatasets(ctry2, '163, 0, 0', '#ff1a1a')
+                        this.createDatasets(country1, '59, 124, 171', '#89d8fa'),
+                        this.createDatasets(country2, '163, 0, 0', '#ff1a1a')
                     ],
                 },
                 options: this.createOptions()
-
             });
         },
         methods: {
@@ -86,8 +90,8 @@
                     .append('option')
                     .text(function (d) { return d; })
             },
-            onChangeSldr(event) {
-                let idx = event.target.value;
+            onChangeSlider(event) {
+                const idx = event.target.value;
                 let allRanks = [];
                 this.data.filter((item) => {
                     if (item.Rank !== 'N/A') {
@@ -95,19 +99,22 @@
                     }
                 });
                 allRanks.sort(function(a, b){return b - a});
-                this.cur_val = allRanks[idx];
-                this.updateRadarCtry1(allRanks[idx]);
+                this.updateValue = allRanks[idx];
+                this.updateRadarCountry1(allRanks[idx]);
+                
+                const currentScore = this.data.filter((item) => item.Rank === allRanks[idx])[0].Score;
+                this.currentScore = currentScore;    
             },
-            closestValue(score, arr) {
-                let curr = arr[0];
-                for (let val of arr) {
-                    if (Math.abs(score - val) < Math.abs(score - curr)) {
-                        curr = val
+            closestRank(score, ranks) {
+                let currentRank = ranks[0];
+                for (let rank of ranks) {
+                    if (Math.abs(score - rank) < Math.abs(score - currentRank)) {
+                        currentRank = rank
                     }
                 }
-                return curr
+                return currentRank
             },
-            updateRadarCtry1(rank) {
+            updateRadarCountry1(rank) {
                 let message = document.getElementById('info');
                 message.innerHTML = '';
                 let allRanks = [];
@@ -116,43 +123,42 @@
                         allRanks.push(item.Rank);
                     }
                 });
-                let closest = this.closestValue((rank), allRanks.sort());
-                let ctry = this.data.filter((item) => item.Rank === closest)[0];
+                const closest = this.closestRank((rank), allRanks.sort());
+                const country = this.data.filter((item) => item.Rank === closest)[0];
 
-                message.innerHTML = '1) Your score resembles ' + ctry.Country + ' the most!';
+                message.innerHTML = '1) Your score resembles ' + country.Country + ' the most!';
 
-                chart.data.datasets[0].data = [ctry.GDP, ctry.Family, ctry.Health, ctry.Freedom, ctry.Trust, ctry.Generosity];
-                chart.data.datasets[0].label = ctry.Country + ' (Rank: ' + ctry.Rank +')';
+                chart.data.datasets[0].data = [country.GDP, country.Family, country.Health, country.Freedom, country.Trust, country.Generosity];
+                chart.data.datasets[0].label = country.Country + ' (Rank: ' + country.Rank +')';
                 chart.update();
             },
             onChangeDropdwn(e) {
-                let selectedOption = e.target.value;
-                this.updateRadarCtry2(selectedOption);
+                this.updateRadarCountry2(e.target.value);
             },
-            updateRadarCtry2(name) {
+            updateRadarCountry2(name) {
                 let warning = document.getElementById('message');
                 warning.innerHTML = '';
                 warning.classList.remove('alert');
-                let ctry = this.data.filter(item => item.Country === name)[0];
-                if (ctry.Rank === "N/A") {
-                    warning.innerHTML = ctry.Country + ' did not take part in the survey of 2019!';
+                const country = this.data.filter(item => item.Country === name)[0];
+                if (country.Rank === "N/A") {
+                    warning.innerHTML = country.Country + ' did not take part in the survey of 2019!';
                     warning.classList.add('alert');
                 } else {
-                    warning.innerHTML = '2) Country of comparison: ' + ctry.Country;
+                    warning.innerHTML = '2) Country of comparison: ' + country.Country + ' (Score:' + country.Score + ')';
                 }
-                chart.data.datasets[1].data = [ctry.GDP, ctry.Family, ctry.Health, ctry.Freedom, ctry.Trust, ctry.Generosity];
-                chart.data.datasets[1].label = ctry.Country + ' (Rank: ' + ctry.Rank +')';
+                chart.data.datasets[1].data = [country.GDP, country.Family, country.Health, country.Freedom, country.Trust, country.Generosity];
+                chart.data.datasets[1].label = country.Country + ' (Rank: ' + country.Rank +')';
                 chart.update();
             },
-            createDatasets(ctry, color, hovercolor) {
+            createDatasets(country, color, hovercolor) {
                 return {
                     backgroundColor: 'rgba(' + color + ', 0.3)',
-                    label: ctry.Country + ' (Rank: ' + ctry.Rank +')',
+                    label: country.Country + ' (Rank: ' + country.Rank +')',
                     hoverBorderColor: hovercolor,
                     borderColor: 'rgba(' + color + ')',
                     hoverBackgroundColor: hovercolor,
                     pointHitRadius: 3,
-                    data: [ctry.GDP, ctry.Family, ctry.Health, ctry.Freedom, ctry.Trust, ctry.Generosity]
+                    data: [country.GDP, country.Family, country.Health, country.Freedom, country.Trust, country.Generosity]
                 }
             },
             createOptions() {
@@ -190,12 +196,13 @@
                 }
             },
             getMaxMetric() {
-                let metrics = ['GDP', 'Family', 'Health', 'Freedom', 'Trust', 'Generosity'];
-                let max_vals = [];
-                for (let m in metrics) {
-                    max_vals.push(d3.max(this.data, (d) => +d[metrics[m]]));
+                let maxMetrics = [];
+                let labels = ['GDP', 'Family', 'Health', 'Freedom', 'Trust', 'Generosity'];
+
+                for (let metric in labels) {
+                    maxMetrics.push(d3.max(this.data, (d) => +d[labels[metric]]));
                 }
-                return Math.max(...max_vals)
+                return Math.max(...maxMetrics)
             },
             getMinMax(property) {
                 let max = d3.max(this.data, (d) => +d[property]); // +d = cast to number
@@ -205,16 +212,3 @@
         }
     }
 </script>
-
-<style lang="scss" scoped>
-    @import "../../assets/styles/abstracts/variables";
-	#message.alert {
-		color: #c70000;
-		font-weight: bolder;
-	}
-
-	#score_range {
-		display: block;
-		margin: 10px 0 50px 0;
-	}
-</style>
