@@ -1,10 +1,10 @@
 # World Happiness Report
 
-![whr_map.png](docs/whr_heat_map.png)
+![whr_map.png](docs/heat_map.jpeg)
 
-![whr_map.png](docs/whr_radar_plot.png)
+![whr_map.png](docs/radar_chart.jpeg)
 
-![whr_map.png](docs/whr_scatter_plot.png)
+![whr_map.png](docs/scatter_plot.jpeg)
 
 
 ## Project Description
@@ -57,7 +57,7 @@ $ npm run build
 
 
 
-## Project Contributers
+## Project Contributors
 
 This project was created in the "Web Visualization" course as a first-semester project for the master's degree in MultiMediaTechnology at the University of Applied Sciences Salzburg.
 
