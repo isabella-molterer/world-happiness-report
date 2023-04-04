@@ -7,14 +7,12 @@
 
 ## Project Description
 
-This project contains the code for various web visualisations based on the data of the World Happiness Reports years 2015-2019.
-The World Happiness Report is an annual publication that ranks countries based on how happy their citizens perceive themselves to be. It takes into account factors such as income, social support, life expectancy, freedom to make life choices, trust in government, generosity, and perceived corruption.
+This project contains the code for various web visualisations based on the data of the World Happiness Reports years 2015-2023.
+The World Happiness Report is an annual publication that ranks countries based on how happy their citizens perceive themselves to be. It takes into account factors such as income, social support, life expectancy, freedom to make life choices, generosity and trust in government and perceived corruption.
 
 Source: [https://worldhappiness.report/](https://worldhappiness.report/)
 
 Website: [https://world-happiness-report.netlify.app/](https://world-happiness-report.netlify.app/)
-
-Below you can find the description of the most important commands.
 
 
 
@@ -27,10 +25,11 @@ The were visualizations made using Vue, D3 and Chart.js.
 
 <table>
   <tr>
-    <td style="border:none;"><img src='docs/nodejs.png' height='100'></td>
-    <td style="border:none;"><img src='docs/vuejs.png' height='100'></td>
-    <td style="border:none;"><img src='docs/d3.png' height='100'></td>
-    <td style="border:none;"><img src='docs/chartjs.png' height='100'></td>
+    <td style="border:none;"><img src='https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png' alt="Node.js" width='100px'></td>
+    <td style="border:none;"><img src='https://user-images.githubusercontent.com/25181517/121401671-49102800-c959-11eb-9f6f-74d49a5e1774.png' alt="npm" width='100px'></td>
+    <td style="border:none;"><img src='https://user-images.githubusercontent.com/25181517/117448124-a2da9800-af3e-11eb-85d2-bd1b69b65603.png' alt="Vue.js" width='100px'></td>
+    <td style="border:none;"><img src='docs/d3.png' alt="D3" width='100px'></td>
+    <td style="border:none;"><img src='docs/chartjs.png' alt="Chart.js" width='100px'></td>
   </tr>
  </table>
  
@@ -55,7 +54,6 @@ $ npm run build
 
 ### Lint with ESLint
 tba
-
 
 
 ## Project Contributers
