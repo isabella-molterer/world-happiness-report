@@ -5,11 +5,21 @@
     <div class="container content">
       <h1>World Happiness Report</h1>
       <div class="intro">
-        <p>The happiness scores and rankings use data from the Gallup World Poll. The scores are based on answers to the main life evaluation question asked in the poll.
-          This question, known as the Cantril ladder, asks respondents to think of a ladder with the best possible life for them being a 10 and the worst possible life being a 0
-          and to rate their own current lives on that scale.
-          The scores are from nationally representative samples for the years 2015-2019 and use the Gallup weights to make the estimates representative.</p>
-        <p>The columns following the happiness score estimate the extent to which each of six factors – economic production, social support, life expectancy, freedom, absence of corruption, and generosity – contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors. They have no impact on the total score reported for each country, but they do explain why some countries rank higher than others.</p>
+        <p>The World Happiness Report is an annual publication that aims to measure and compare the level of happiness in different countries around the world. 
+          To do this, the report uses data from the Gallup World Poll, which is a large-scale survey. 
+          The happiness scores and rankings in the World Happiness Report are based on a single question that asks respondents to evaluate their own lives on a scale of 0 to 10. 
+          This question is known as the Cantril ladder, and it asks people to imagine a ladder with the best possible life being at the top (10) and the worst possible life at the bottom (0). 
+          Respondents are then asked to rate their current life on that scale.
+        </p>
+        <p>
+          The scores used in the report are from nationally representative samples of the population in each country. These samples are taken from the years 2015-2022 and are weighted using the Gallup weights to make the estimates representative.
+        </p>
+
+        <p>The report also looks at six factors that contribute to the happiness score: GDP per capita (GDP), Social support (Family), Healthy Life Expectancy (Health), 
+          Freedom to make life choices (Freedom), Generosity (Generosity) and Corruption Perception (Trust). 
+          These factors are compared to the values of a hypothetical country called Dystopia, which has the world's lowest national averages for each factor. While these factors don't affect a country's total happiness score, they help explain why some countries rank higher than others.
+          Overall, the scores and rankings in the World Happiness Report provide insights into how people in different countries perceive their lives and how factors such as economic, social, and political conditions contribute to their overall sense of well-being.
+        </p>
         <p>
           Data source: <a target="_blank" href="https://worldhappiness.report/">https://worldhappiness.report/</a><br>
           Source code: <a target="_blank" href="https://github.com/isabella-molterer/world-happiness-report">https://github.com/isabella-molterer/world-happiness-report</a>
@@ -24,8 +34,13 @@
       <!-- World map visualisation -->
       <section id="map-visualisation">
         <h2>Visualisation as heat map</h2>
-        <p>How happy is the world? On this map, you can see how the ranks and scores have changed between 2015 and 2019.
-            The blacked out countries didn't participate in the survey in that particular year.</p>
+        <p>This map is a visual representation of the World Happiness Report's rankings from 2015 to 2022, shown as a heat map.</p>
+        <p>The color and intensity of the colors on the map reflects the level of happiness in each country.
+          Countries with cooler colors, such as blue and green, are ranked higher and have higher happiness scores, while countries with warmer colors, such as red and orange, are ranked lower and have lower happiness scores.
+          If a country is filled with white, it means that it did not participate in the survey in that particular year, so there is no data available to determine its happiness score. </p>
+        <p>
+          Overall, this heat map provides an easy-to-understand visual summary of how happiness levels have changed across the world over time.
+        </p>
         <Map/>
       </section>
 
@@ -34,11 +49,12 @@
       <section id="radar-chart-visualisation">
         <h2>Visualisation as radar chart</h2>
         <div class="intro">
-          <p>How Happy are You? In the example below you can compare two countries and explore how the six different metrics GDP, Family, Health, Freedom, Trust
-            and Generosity contribute to their happiness.</p>
-          <p>	First you can set the first country by choosing a value on the slider to find out which country comes closest to your personal
-            happiness score! Afterwards you can choose any other country in the dropdown menu of step 2) to compare.</p>
-          <p>To start with, we assumed you probably want to check out the happiest (Finland) and unhappiest country (South Sudan) of year the 2019.</p>
+          <p>This is a radar chart provides an interactive and visual way to compare the happiness levels of two countries by exploring six different metrics: GDP, Family, Health, Freedom, Trust, and Generosity.</p>
+          <p>To interact with the chart, you can first (1) select a country, which finds the country that comes closest to your personal happiness score. 
+            Then, you can (2) choose another country from the dropdown menu to compare it with the first one.<br>
+            Please note that your personal happiness score can only range between the highest and lowest ranked countries, so you cannot choose a score outside of these limits.
+          </p>
+          <p>The default setting is to compare the happiest country of 2022, Finland, with the unhappiest country, Afghanistan.</p>
         </div>
         <Radar/>
       </section>
@@ -46,17 +62,17 @@
       <!-- Scatter plot visualisation -->
       <section id="scatter-plot-visualisation">
         <h2>Visualisation as scatter plot</h2>
-        <p>What influences the happiness of the regions? In the following scatter chart you can find out a bit more about the different regions in the world.
-            In the happiness report, the world got divided in 10 different regions.
-            You can explore the correlation between the average values of the 6 different metrics
-            (GDP, Family, Health, Freedom, Trust and Generosity),
-            as well as the rank and the score of the different regions. </p>
+        <p>This scatter plot shows how different regions in the world are affected by the six different factors that contribute to happiness: GDP, Family, Health, Freedom, Trust, and Generosity. 
+          The chart is divided into 10 different regions based on the World Happiness Report of 2022.</p>
+        <p>By interacting with the chart, you can explore the correlation between the average values of these six metrics as well as the rank of each region. 
+          The scatter plot provides a visual representation of the data, where each region is represented by a dot on the chart, and the position of the dot shows how the region is ranked in terms of happiness score and the six metrics.
+        </p>
+        <p>This chart allows you to easily compare the happiness levels of different regions in the world and identify patterns and trends in the data.</p>
         <Scatter/>
       </section>
     </div>
 
     <TheFooter />
-
   </div>
 </template>
 
@@ -76,6 +92,5 @@
 </script>
 
 <style lang="scss">
-@import "./assets/styles/abstracts/variables";
 @import "./assets/styles/styles.scss";
 </style>

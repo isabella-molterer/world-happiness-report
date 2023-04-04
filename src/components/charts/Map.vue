@@ -8,12 +8,12 @@
                 <p><span>Score:</span> -</p>
             </div>
             <div class="data__slider slider">
-                <input class="slider__input" type="range" min="0" max="8" step="1" v-bind:value="0" v-on:input="onChg($event)">
+                <input class="slider__input" type="range" min="0" max="7" step="1" v-bind:value="0" v-on:input="onChg($event)">
                 <p class="slider__value">Year&nbsp;<span id="rangeValue">2015</span></p>             
             </div>
         </div>
 
-        <!-- Chart -->
+        <!-- Heat Map -->
         <div id="svg_map">
             <svg id="map" viewBox="0 -150 1000 600" fill="#fff" preserveAspectRatio="none"></svg>
         </div>
@@ -23,15 +23,14 @@
 <script>
     import * as d3 from 'd3'
     import * as topojson from "topojson-client"
-    import data15 from '../data/2015.json'
-    import data16 from '../data/2016.json'
-    import data17 from '../data/2017.json'
-    import data18 from '../data/2018.json'
-    import data19 from '../data/2019.json'
-    import data20 from '../data/2020.json'
-    import data21 from '../data/2021.json'
-    import data22 from '../data/2022.json'
-    import data23 from '../data/2023.json'
+    import data15 from '../../assets/data/2015.json'
+    import data16 from '../../assets/data/2016.json'
+    import data17 from '../../assets/data/2017.json'
+    import data18 from '../../assets/data/2018.json'
+    import data19 from '../../assets/data/2019.json'
+    import data20 from '../../assets/data/2020.json'
+    import data21 from '../../assets/data/2021.json'
+    import data22 from '../../assets/data/2022.json'
 
     let idx = 0;
 
@@ -39,7 +38,7 @@
         name: 'Map',
         data()  {
             return {
-                countryData: [ data15, data16, data17, data18, data19, data20, data21, data22, data23 ]
+                countryData: [ data15, data16, data17, data18, data19, data20, data21, data22 ]
             }
         },
         mounted() {
@@ -47,7 +46,7 @@
         },
         methods: {
             setColorScale() {
-                var svg = d3.select("svg");
+                let svg = d3.select("svg");
 
                 svg.append("g")
                     .attr("class", "legendLog")
@@ -55,27 +54,27 @@
             },
             onChg(event) {
                 idx = event.target.value;
-                let time = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"]; // adjust
+                const time = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"];
                 document.getElementById("rangeValue").innerHTML = time[idx];
                 this.drawMap(idx);
             },
             getMinMax(property) {
-                let max = d3.max(this.countryData[idx], (d) => +d[property]); // +d = cast to number
-                let min = d3.min(this.countryData[idx], (d) => +d[property]);
+                const max = d3.max(this.countryData[idx], (d) => +d[property]); // +d = cast to number
+                const min = d3.min(this.countryData[idx], (d) => +d[property]);
                 return { min, max }
             },
             countryColorScale() {
-                let minMaxRank = this.getMinMax('Rank');
+                const minMaxRank = this.getMinMax('Rank');
                 return d3.scaleLinear()
                     .domain([0, minMaxRank.min, minMaxRank.max])
                     .range(["#fff", "#54b3f8", "#c70000"]);
             },
             getCountryRank(name, idx) {
-                let country = this.countryData[idx].filter(item => item.Country === name);
+                const country = this.countryData[idx].filter(item => item.Country === name);
                 return country.length ? country[0].Rank : "N/A";
             },
             getCountryScore(name, idx) {
-                let country = this.countryData[idx].filter(item => item.Country === name);
+                const country = this.countryData[idx].filter(item => item.Country === name);
                 return country.length ? country[0].Score : "N/A";
             },
             getPathId(target) {
@@ -89,14 +88,14 @@
                 return targetPath;
             },
             drawMap(idx) {
-                let infobox = document.getElementById("data__country");
+                const infobox = document.getElementById("data__country");
                 d3.json("https://unpkg.com/world-atlas@2.0.2/countries-110m.json")
                 .then((world) => {
                     let svg = d3.select("#map");
                     svg.selectAll("*").remove();
                     svg.attr("fill", "#fff");
-                    let path = d3.geoPath().projection(d3.geoMercator());
-                    let scale = this.countryColorScale();
+                    const path = d3.geoPath().projection(d3.geoMercator());
+                    const scale = this.countryColorScale();
                     var mainGroup = svg.append("g");
                     mainGroup.selectAll("path")
                         .data(topojson.feature(world,world.objects.countries).features)
@@ -110,8 +109,8 @@
                             const id = this.getPathId(event.target);
                             d3.select(".path_" + id).attr("stroke", 'white').attr("stroke-width", '1.5');
                             d3.select(".path_" + id).style("cursor", "pointer");
-                            let rank = this.getCountryRank(name, idx);
-                            let score = this.getCountryScore(name, idx);
+                            const rank = this.getCountryRank(name, idx);
+                            const score = this.getCountryScore(name, idx);
                             infobox.innerHTML = `<p><span>Country:</span> ${name}</p><p><span>Rank:</span> ${rank}</p><p><span>Score:</span> ${score}</p>`
                         })
                         .on("mouseout", (event) => {
@@ -121,8 +120,8 @@
                         })
                         .attr("d", path)
                         .style("fill", (d) => {
-                            let { name } = d.properties;
-                            let rank = this.getCountryRank(name, idx);
+                            const { name } = d.properties;
+                            const rank = this.getCountryRank(name, idx);
                             return scale(rank);
                         });
                 });

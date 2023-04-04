@@ -15,7 +15,7 @@
             </div>
 
         </div>
-        <!-- Chart -->
+        <!-- Scatter Plot -->
         <div class="scatterplot__plot-wrapper">
             <canvas id="plot" width="400" height="400"></canvas>
         </div>
@@ -38,32 +38,30 @@
 </template>
 
 <script>
-
     import * as d3 from 'd3'
-    import data_regions from '../data/region_means.json'
+    import dataRegions from '../../assets/data/2022_region_means.json'
     import Chart from 'chart.js';
 
     const arrayColumn = (arr, n) => arr.map(x => x[n]);
 
     let chart;
-    let options = ['Rank', 'Score', 'GDP', 'Family', 'Health', 'Freedom', 'Trust', 'Generosity'];
-    let regions = arrayColumn(data_regions, 'Region');
-    var x = 'Rank';
-    var y = 'Rank';
+    let x = 'Rank';
+    let y = 'Rank';
+    const options = ['Rank', 'Score', 'GDP', 'Family', 'Health', 'Freedom', 'Trust', 'Generosity'];
+    const regions = arrayColumn(dataRegions, 'Region');
 
     export default {
         name: 'Scatter',
         data() {
             return {
-                data: data_regions
+                data: dataRegions
             };
         },
         mounted() {
             this.createDropdown();
-            var ctx = document.getElementById('plot').getContext('2d');
+            const ctx = document.getElementById('plot').getContext('2d');
 
-
-            var pointBackgroundColors = ["#a6cee3", "#1f78b4",
+            const pointBackgroundColors = ["#a6cee3", "#1f78b4",
                 "#b2df8a", "#33a02c",
                 "#fb9a99", "#e31a1c",
                 "#fdbf6f", "#ff7f00",
@@ -72,7 +70,6 @@
             Chart.defaults.global.defaultFontFamily = "Lato";
             chart = new Chart(ctx, {
                 type: 'scatter',
-
                 data: {
                     datasets: [{
                         data: this.generateData(),
@@ -98,12 +95,12 @@
             generateData(new_x = x, new_y = y) {
                 x = new_x;
                 y = new_y;
-                var data = [];
-                for (var i = 0; i < data_regions.length; i++) {
+                let data = [];
+                for (var i = 0; i < dataRegions.length; i++) {
                     data.push({
-                        index: data_regions[i].Region,
-                        x:  data_regions[i][x],
-                        y:  data_regions[i][y],
+                        index: dataRegions[i].Region,
+                        x:  dataRegions[i][x],
+                        y:  dataRegions[i][y],
                     });
                 }
                 return data;
@@ -114,25 +111,25 @@
                     .data(options)
                     .enter()
                     .append('option')
-                    .text(function (d) { return d; }) // text showed in the menu
+                    .text(function (d) { return d; })
                 d3.select("#y-select")
                     .selectAll('myOptions')
                     .data(options)
                     .enter()
                     .append('option')
-                    .text(function (d) { return d; }) // text showed in the menu
+                    .text(function (d) { return d; })
             },
             onXchange(e) {
-                let new_value = e.target.value;
-                var new_data = this.generateData(new_value, y);
-                chart.options.scales.xAxes[0].scaleLabel.labelString = new_value;
-                this.updateChart(new_data);
+                const updateValue = e.target.value;
+                const updateData = this.generateData(updateValue, y);
+                chart.options.scales.xAxes[0].scaleLabel.labelString = updateValue;
+                this.updateChart(updateData);
             },
             onYchange(e) {
-                let new_value = e.target.value;
-                var new_data = this.generateData(x, new_value);
-                chart.options.scales.yAxes[0].scaleLabel.labelString = new_value;
-                this.updateChart(new_data);
+                const updateValue = e.target.value;
+                const updateData = this.generateData(x, updateValue);
+                chart.options.scales.yAxes[0].scaleLabel.labelString = updateValue;
+                this.updateChart(updateData);
             },
             createOptions() {
                 return {
@@ -144,14 +141,13 @@
                         footerSpacing: 5,
                         callbacks: {
                             label: function(tooltipItem) {
-                                var label = regions[tooltipItem.index];
+                                const label = regions[tooltipItem.index];
                                 return label + ' ('+ x +' '+ tooltipItem.xLabel + ', '+ y +' '+ tooltipItem.yLabel + ')';
                             }
                         }
                     },
                     legend: {
                         display: false,
-                        //position: 'right',
                         labels: {
                             fontColor: 'rgba(255, 255, 255, 1',
                             fontSize: 20
