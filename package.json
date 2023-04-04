@@ -26,7 +26,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "cz-conventional-changelog"
+      "path": "node_modules/cz-emoji-conventional"
     }
   },
   "devDependencies": {
